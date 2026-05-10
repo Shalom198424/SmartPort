@@ -26,7 +26,7 @@ export function CraneUtilizationChart() {
               contentStyle={{ background:'#1b2024', border:'1px solid rgba(255,255,255,0.08)', borderRadius:'4px', fontSize:11 }}
               itemStyle={{ color:'#dee3e9' }}
               labelStyle={{ color:'#88929b' }}
-              formatter={(v: number) => [`${v}%`, 'Utilization']}
+              formatter={(v: any) => [`${v}%`, 'Utilization']}
             />
             <Bar dataKey="util" radius={[2,2,0,0]}>
               {data.map((d, i) => (
@@ -81,7 +81,7 @@ export function ThroughputChart() {
               contentStyle={{ background:'#1b2024', border:'1px solid rgba(255,255,255,0.08)', borderRadius:'4px', fontSize:11 }}
               itemStyle={{ color:'#0ea5e9' }}
               labelStyle={{ color:'#88929b' }}
-              formatter={(v: number) => [`${v} TEU/hr`, 'Throughput']}
+              formatter={(v: any) => [`${v} TEU/hr`, 'Throughput']}
             />
             <Area type="monotone" dataKey="value" stroke="#0ea5e9" strokeWidth={2}
               fill="url(#blueGrad)" dot={false} activeDot={{ r:3, fill:'#0ea5e9' }} />
@@ -123,7 +123,7 @@ export function TruckQueueChart() {
               contentStyle={{ background:'#1b2024', border:'1px solid rgba(255,255,255,0.08)', borderRadius:'4px', fontSize:11 }}
               itemStyle={{ color:'#8b5cf6' }}
               labelStyle={{ color:'#88929b' }}
-              formatter={(v: number) => [`${v} trucks`, 'Queue']}
+              formatter={(v: any) => [`${v} trucks`, 'Queue']}
             />
             <Area type="monotone" dataKey="queue" stroke="#8b5cf6" strokeWidth={2}
               fill="url(#purpleGrad)" dot={false} activeDot={{ r:3, fill:'#8b5cf6' }} />
